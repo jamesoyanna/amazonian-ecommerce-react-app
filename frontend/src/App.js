@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
 // import ProductScreen from "./screens/ProductScreen";
-// import CartScreen from "./screens/CartScreen";
-// import SigninScreen from "./screens/SigninScreen";
+ import CartPage from "./pages/CartPage";
+import SigninPage from "./pages/SigninPage";
 import { useSelector } from "react-redux";
 // import RegisterScreen from "./screens/RegisterScreen";
 // import ProductsScreen from "./screens/ProductsScreen";
@@ -31,7 +31,7 @@ function App() {
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <Link to="/">amazona</Link>
+            <Link to="/">amazonian</Link>
           </div>
           <div className="header-links">
             <a href="cart.html">Cart</a>
@@ -60,11 +60,11 @@ function App() {
           </button>
           <ul className="categories">
             <li>
-              <Link to="/category/Pants">Pants</Link>
+              <Link to="/category/mens-wear">Men's Wear</Link>
             </li>
 
             <li>
-              <Link to="/category/Shirts">Shirts</Link>
+              <Link to="/category/womens-wear">Women's Wear</Link>
             </li>
           </ul>
         </aside>
@@ -78,17 +78,19 @@ function App() {
             <Route path="/shipping" component={ShippingScreen} />
             <Route path="/payment" component={PaymentScreen} />
             <Route path="/placeorder" component={PlaceOrderScreen} />
-            <Route path="/signin" component={SigninScreen} />
+            
             <Route path="/register" component={RegisterScreen} />
             <Route path="/product/:id" component={ProductScreen} />
-            <Route path="/cart/:id?" component={CartScreen} />
             */}
+            <Route path="/signin" component={SigninPage} />
+            <Route path="/cart/:id?" component={CartPage} />
+
             <Route path="/category/:id" component={HomePage} />
-              
+
             <Route path="/" exact={true} component={HomePage} />
           </div>
         </main>
-        <footer className="footer">All right reserved.</footer>
+        <footer className="footer">All right reserved @2021 Amazonian.</footer>
       </div>
     </BrowserRouter>
   );
