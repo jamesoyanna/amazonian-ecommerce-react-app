@@ -2,18 +2,18 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
-// import ProductScreen from "./screens/ProductScreen";
+import ProductPage from "./pages/ProductPage";
  import CartPage from "./pages/CartPage";
 import SigninPage from "./pages/SigninPage";
 import { useSelector } from "react-redux";
-// import RegisterScreen from "./screens/RegisterScreen";
-// import ProductsScreen from "./screens/ProductsScreen";
-// import ShippingScreen from "./screens/ShippingScreen";
-// import PaymentScreen from "./screens/PaymentScreen";
-// import PlaceOrderScreen from "./screens/PlaceOrderScreen";
-// import OrderScreen from "./screens/OrderScreen";
-// import ProfileScreen from "./screens/ProfileScreen";
-// import OrdersScreen from "./screens/OrdersScreen";
+import RegisterPage from "./pages/RegisterPage";
+import ProductsPage from "./pages/ProductsPage";
+import ShippingPage from "./pages/ShippingPage";
+import PaymentPage from "./pages/PaymentPage";
+import PlaceOrderPage from "./pages/PlaceOrderPage";
+import OrderPage from "./pages/OrderPage";
+import ProfilePage from "./pages/ProfilePage";
+import OrdersPage from "./pages/OrdersPage";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -70,18 +70,18 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
-            {/*  
-            <Route path="/orders" component={OrdersScreen} />
-            <Route path="/profile" component={ProfileScreen} />
-            <Route path="/order/:id" component={OrderScreen} />
-            <Route path="/products" component={ProductsScreen} />
-            <Route path="/shipping" component={ShippingScreen} />
-            <Route path="/payment" component={PaymentScreen} />
-            <Route path="/placeorder" component={PlaceOrderScreen} />
+           
+            <Route path="/orders" component={OrdersPage} />
+            <Route path="/profile" component={ProfilePage} />
+            <Route path="/order/:id" component={OrderPage} />
+            <Route path="/products" component={ProductsPage} />
+            <Route path="/shipping" component={ShippingPage} />
+            <Route path="/payment" component={PaymentPage} />
+            <Route path="/placeorder" component={PlaceOrderPage} />
             
-            <Route path="/register" component={RegisterScreen} />
-            <Route path="/product/:id" component={ProductScreen} />
-            */}
+            <Route path="/register" component={RegisterPage} />
+            <Route path="/product/:id" component={ProductPage} />
+           
             <Route path="/signin" component={SigninPage} />
             <Route path="/cart/:id?" component={CartPage} />
 
